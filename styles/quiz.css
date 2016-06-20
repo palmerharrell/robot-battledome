@@ -1,0 +1,435 @@
+body { 
+  background: url(../images/waterfall.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#selected_bot_img {
+position: relative;
+left: 5px;
+top: 10px;
+margin-bottom: 17px;
+
+}
+
+.header {
+	width: 1150px;
+	margin-top: 30px;
+	color: #e1eef6;
+	text-align: center;
+	background-color: #004e66;
+	border: 5px solid #004e66;
+	border-radius: 10px;
+}
+
+.header h1 {
+	font-size: 4em;
+	margin-top: 10px;
+}
+
+.row {
+	margin-top: 50px;
+}
+
+#menu_screen,
+#battle_screen {
+	position: relative;
+	bottom: 22px;
+}
+
+#robot_select, #option_select {
+	display: inline-block;
+  margin: 0 10px;
+	padding: 6px 25px 0 5px;
+	height: 550px;
+	color: #004e66;
+}
+
+#robot_select {
+	float: left;
+	width: 550px;
+	padding-left: 15px;
+	padding-right: 25px;
+	background-color: #fcbe32;
+	border: 5px solid #004e66;
+	border-radius: 20px;
+}
+
+#char_buttons {
+	float: left;
+	width: 240px;
+}
+
+#option_select h2 {
+	margin-top: 0;
+}
+
+#char_buttons h2 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+#stat_group {
+	background-color: #e1eef6;
+	border: 5px solid #004e66;
+	border-radius: 10px;
+	padding-bottom: 10px;
+}
+
+.stat {
+	color: #ff5f2e;
+}
+
+.stat_header {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 12px;
+	
+}
+
+.stat_name {
+	font-size: 1.8em;
+	color: #e1eef6;
+	background-color: #004e66;
+	border: 3px solid #004e66;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+#char_buttons .btn {
+	display: inline-block;
+	width: 210px;
+	margin: 0 25px 9px 13px;
+	color: #004e66;
+	font-weight: bold;
+	padding: 20px 0;
+	background-color: #e1eef6;
+	border: 3px solid #004e66;
+	border-radius: 10px;
+	outline: none;
+}
+
+#weapon_buttons .btn,
+#mod_buttons .btn {
+	display: inline-block;
+	width: 160px;
+	color: #004e66;
+	margin-left: 19px;
+	margin-top: 5px;
+	margin-bottom: 8px;
+	padding: 15px 0;
+	background-color: #e1eef6;
+	border: 3px solid #004e66;
+	border-radius: 10px;
+	outline: none;
+}
+
+.option_name,
+.option_detail {
+	margin-bottom: 0;
+}
+
+.option_name {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+#char_buttons .btn:active,
+#char_buttons .btn.active,
+#weapon_buttons .btn:active,
+#weapon_buttons .btn.active,
+#mod_buttons .btn:active,
+#mod_buttons .btn.active {
+	background-color: #ff5f2e;
+	color: #e1eef6;
+}
+
+
+#char_buttons .btn:hover,
+#weapon_buttons .btn:hover,
+#mod_buttons .btn:hover {
+	color: #ff5f2e;
+	border: 3px solid #ff5f2e;
+}
+
+.active:hover {
+	color: #e1eef6 !important;
+	border: 3px solid #004e66 !important;
+}
+
+.attack:hover {
+	border-color: #e1eef6;
+	color: #e1eef6;
+}
+
+#selection_detail {
+	float: right;
+	width: 250px;
+	text-align: center;
+}
+
+#option_select {
+	float: right;
+	width: 580px;
+	padding-top: 0;
+	padding-right: 0;
+}
+
+#weapon_select, #mod_select {
+	height: 260px;
+	margin-top: 0;
+	background-color: #fcbe32;
+	border: 5px solid #004e66;
+	border-radius: 20px;
+}
+
+#weapon_select {
+	margin-bottom: 30px;
+}
+
+#weapon_select h2, #mod_select h2 {
+	padding-left: 10px;
+	padding-top: 6px;
+	padding-bottom: 0;
+	margin-bottom: 7px;
+}
+
+#weapon_group,
+#mod_group {
+	width: 560px;
+}
+
+#weapon_buttons,
+#mod_buttons {
+	width: 100%;
+}
+
+.ready,
+.notReady {
+	position: relative;
+	top: -30px;
+	left: 455px;
+	height: 50px;
+	width: 200px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.ready, 
+.attack, 
+.game_over {
+	background-color: #ff5f2e;
+	color: #004e66;
+	border: 5px solid #004e66;
+}
+
+.notReady {
+	color: rgba(225, 238, 246, .8);
+	background-color: rgba(255, 95, 46, .8);
+	border: 5px solid rgba(0, 78, 102, .8);
+}
+
+.disabled_attack {
+	color: rgba(0, 78, 102, .8);
+	background-color: rgba(255, 95, 46, .8);
+	border: 5px solid rgba(0, 78, 102, .8);
+}
+
+.notReady:hover {
+	color: rgba(225, 238, 246, .8);
+}
+
+.ready:hover {
+	color: #e1eef6;
+	border-color: #e1eef6;
+}
+
+
+.attack,
+.disabled_attack,
+.game_over {
+	position: relative;
+	top: 22px;
+	left: 110px;
+	height: 72px;
+	width: 300px;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.attack {
+	cursor: pointer;
+}
+
+.game_over:hover {
+	color: #004e66;
+	border-color: #004e66;
+}
+
+.robot {
+	display: inline-block;
+  margin: 0 10px;
+	padding: 15px 25px 0 25px;
+	height: 550px;
+	width: 300px;
+	border: 5px solid #004e66;
+	border-radius: 20px;
+	color: #004e66;
+	text-align: center;
+}
+
+.robot img {
+	position: relative;
+	top: 10px;
+}
+
+/* Flip image horizontally */
+.flipped {
+	-moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/* dim and blur loser's img */
+.loser {
+	-webkit-filter: opacity(50%) blur(1px);
+}
+
+#player1 {
+	float: left;
+	background-color: #fcbe32;
+}
+
+#player2 {
+	float: right;
+	background-color: #fcbe32;
+}
+
+.player_name {
+	position: relative;
+	bottom:10px;
+	height: 95px;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+}
+
+.player_name h1 {
+	display: block;
+	width:240px;
+}
+
+.progress {
+	height: 40px;
+	background-color: #e1eef6;
+	border: 5px solid #004e66;
+	border-radius: 10px;
+}
+
+.progress-bar {
+	background-color: #ff5f2e;
+}
+
+.equipment {
+	position: relative;
+	bottom: 20px;
+}
+
+.equipment h4 {
+	margin-top: 14px;
+	margin-bottom: 0;
+}
+
+.battle_log {
+	overflow: auto;
+	float: none;
+	margin: 0 340px;
+	padding: 10px;
+	height: 450px;
+	width: auto;
+	border: 5px solid #004e66;
+	background-color: #e1eef6;
+	font-size: 1.1em;
+}
+
+.battle_log h1 {
+	text-align: center;
+	color: #fcbe32;
+}
+
+#battle_header {
+	background-color: #fcbe32;
+}
+
+.battleP1 {
+	float: left;
+	margin-left: 28px;
+	color: #004e66;
+}
+
+.battleP2 {
+	float: right;
+	margin-right: 28px;
+	color: #004e66;
+}
+
+.battle_fight {
+	color: #ff5f2e;
+}
+
+.log_entry {
+	float: left;
+	width: 100%;
+	margin-bottom: 18px;
+}
+
+.log_entry:nth-of-type(even) {
+	float: right;
+}
+
+.p1_attack {
+	color: #004e66;
+	text-align: right;
+}
+
+.p2_attack {
+	color: #ff5f2e;
+}
+
+.p1_attack, .p2_attack {
+	margin-bottom: 0;
+}
+
+.end_battle,
+.end_battleP2 {
+	width: 100%;
+	display: block;
+	clear: both;
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #004e66;
+}
+
+.end_battleP2 {
+	color: #ff5f2e;
+}
+
+/* Hide Scrollbar*/
+.battle_log::-webkit-scrollbar { 
+  display: none;
+}
+
+
+
+

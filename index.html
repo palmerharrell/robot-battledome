@@ -1,0 +1,204 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Robot Battledome - Palmer Harrell</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+	<header>
+		<div class="container header" id="battle_header">
+			<div class="battleP1"><h1>Player 1</h1></div>
+			<div class="battleP2"><h1>Player 2</h1></div>
+			<div class="battle_fight"><h1>Robot Battledome</h1></div>
+		</div>
+		<div class="container header" id="menu_header">
+			<h1 id="player1_header">Robot Battledome - Player 1 Select</h1>
+			<h1 id="player2_header">Robot Battledome - Player 2 Select</h1>
+		</div>
+	</header>
+
+<!-- *** CHARACTER SELECT SCREEN *** -->
+	<div class="container" id="menu_screen">
+		<div class="row">
+			<div class="col-md-5" id="robot_select">
+				<div class="btn-group-vertical btn-group-lg" id="char_buttons">
+					<h2>SELECT ROBOT</h2>
+				  <button type="button" class="btn btn-default" id="R2D2">R2D2</button>
+				  <button type="button" class="btn btn-default" id="Johnny5">Johnny Five</button>
+				  <button type="button" class="btn btn-default" id="Wasp">Wasp</button>
+				  <button type="button" class="btn btn-default" id="ProbeDroid">Imperial Probe Droid</button>
+				  <button type="button" class="btn btn-default" id="C3PO">C3PO</button>
+				  <button type="button" class="btn btn-default" id="ASIMO">ASIMO</button>
+				</div>
+				<div id="selection_detail">
+					<img id="selected_bot_img" src="images/group_shot.png">
+					<div id="stat_group">
+						<div class="stat_name" id="botName">Robot</div>
+						<div class="stat_header">Type:</div>
+						<div class= "stat" id="botType">---</div>
+						<div class="stat_header">Weapon:</div>
+						<div class="stat" id="botWeapon">---</div>
+						<div class="stat_header">Modification:</div>
+						<div class="stat" id="botModification">---</div>
+					</div>
+				</div>
+			</div> <!-- End #robot_select -->
+
+<!-- Weapon and Modification Select -->
+			<div class="col-md-7" id="option_select">
+
+				<!-- WEAPON SELECT -->
+				<div id="weapon_select">
+					<h2>SELECT WEAPON</h2>
+					<div class="btn-group btn-group-lg" id="weapon_buttons">
+						<div class="weapon_group">
+							<button type="button" class="btn btn-default" id="Pistol">
+								<p class="option_name">Pistol</p>
+								<p class="option_detail">Damage: 10 - 40</p>
+							</button>
+							<button type="button" class="btn btn-default" id="Rifle">
+								<p class="option_name">Rifle</p>
+								<p class="option_detail">Damage: 20 - 30</p></button>
+							<button type="button" class="btn btn-default" id="RPG">
+								<p class="option_name">RPG</p>
+								<p class="option_detail">Damage: 5 - 50</p>
+							</button>
+						</div>
+						<div class="weapon_group">
+							<button type="button" class="btn btn-default" id="Dagger">
+								<p class="option_name">Dagger</p>
+								<p class="option_detail">Damage: 10 - 40</p></button>
+							<button type="button" class="btn btn-default" id="Sword">
+								<p class="option_name">Sword</p>
+								<p class="option_detail">Damage: 20 - 30</p>
+							</button>
+							<button type="button" class="btn btn-default" id="Axe">
+								<p class="option_name">Axe</p>
+								<p class="option_detail">Damage: 5 - 50</p>
+							</button>
+						</div>
+					</div>
+				</div> <!-- END WEAPON SELECT -->
+
+				<!-- MOD SELECT -->
+				<div id="mod_select">
+					<h2>SELECT MODIFICATION</h2>
+					<div class="btn-group btn-group-lg" id="mod_buttons">
+						<div class="mod_group">
+							<button type="button" class="btn btn-default" id="TargetingChip">
+								<p class="option_name">Targeting Chip</p>
+								<p class="option_detail">Dmg++</p>
+							</button>
+							<button type="button" class="btn btn-default" id="HeavyShield">
+								<p class="option_name">Heavy Shield</p>
+								<p class="option_detail">Def++</p></button>
+							<button type="button" class="btn btn-default" id="DodgeRockets">
+								<p class="option_name">Dodge Rockets</p>
+								<p class="option_detail">Evade++</p>
+							</button>
+						</div>
+						<div class="mod_group">
+							<button type="button" class="btn btn-default" id="TacticalChip">
+								<p class="option_name">Tactical Chip</p>
+								<p class="option_detail">Dmg+ Def+</p></button>
+							<button type="button" class="btn btn-default" id="AgileShield">
+								<p class="option_name">Agile Shield</p>
+								<p class="option_detail">Def+ Evade+</p>
+							</button>
+							<button type="button" class="btn btn-default" id="BoosterRocket">
+								<p class="option_name">Boster Rocket</p>
+								<p class="option_detail">Dmg+ Evade+</p>
+							</button>
+						</div>
+					</div>
+				</div> <!-- END MOD SELECT -->
+			</div> <!-- END Weapon and Modification Select -->
+		</div> <!-- END .row (options) -->
+		
+		<!-- Ready Button -->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="btn notReady" id="ready_button1" disabled="disabled">
+					Player 1 Ready
+				</div>
+				<div class="btn notReady" id="ready_button2" disabled="disabled">
+					Player 2 Ready
+				</div>
+			</div>
+		</div> <!-- END .row (Ready Button) -->
+
+	</div> <!-- *** END CHARACTER SELECT SCREEN *** -->
+
+
+
+<!-- *** BATTLE SCREEN *** -->
+	<div class="container" id="battle_screen">
+		<div class="row">
+
+	<!-- START PLAYER 1 -->
+		  <div class="col-md-4 robot" id="player1">
+		  	<div class="progress">
+  				<div id="p1health" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    				<span class="sr-only">60% Complete</span>
+  				</div>
+				</div>
+		  	<div class ="player_image">
+		  		<img src="images/fImperialProbe2.png" alt="Asimo">
+		  	</div>
+		  	<div class ="player_name">
+		  		<h1>Imperial Probe Droid</h1>
+		  	</div>
+		  	<div class="equipment">
+			  	<h4>Weapon:</h4>
+			  	<div class="weapon_detail"></div>
+			  	<h4>Modification:</h4>
+			  	<div class="mod_detail"></div>
+		  	</div>
+		  </div> <!-- END PLAYER 1 -->
+
+	<!-- START PLAYER 2 -->
+			<div class="col-md-4 robot" id="player2">
+				<div class="progress">
+  				<div id="p2health" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+    				<span class="sr-only">100% Complete</span>
+  				</div>
+				</div>
+				<div class="player_image">
+					<img class ="flipped" src="images/rR2D2.png" alt="Asimo">
+				</div>
+		  	<div class ="player_name">
+		  		<h1>R2D2</h1>
+		  	</div>
+		  	<div class="equipment">
+			  	<h4>Weapon:</h4>
+			  	<div class="weapon_detail"></div>
+			  	<h4>Modification:</h4>
+			  	<div class="mod_detail"></div>
+		  	</div>
+		  </div> <!-- END PLAYER 2 -->
+
+	<!-- Battle Log -->
+			<div class="col-md-4 battle_log">
+				<h1>Begin Battle!</h1>
+			</div>
+
+	<!-- Attack Button -->
+			<div class="col-md-12 attack">Attack</div>
+
+		</div> <!-- END .row -->
+	</div> <!-- *** END BATTLE SCREEN *** -->
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="scripts/robots.js"></script>
+	<script src="scripts/weapons.js"></script>
+	<script src="scripts/modifications.js"></script>
+	<script src="scripts/quiz.js"></script>
+
+</body>
+</html>

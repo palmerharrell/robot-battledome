@@ -1,0 +1,22 @@
+{
+  "name": "robot-battledome-palmerharrell",
+  "homepage": "https://github.com/nss-day-cohort-12/robot-battledome-palmerharrell",
+  "authors": [
+    "Palmer Harrell <palmerharrell@me.com>"
+  ],
+  "description": "NSS Quiz 4",
+  "main": "scripts/quiz.js",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6"
+  }
+}
