@@ -20,7 +20,7 @@ function Roller() {
 	this.shield = 5;
 	this.evasion = 8;
 }
-R2D2.prototype = new Robot();
+Roller.prototype = new Robot();
 
 // Roller Models
 function R2D2() {
